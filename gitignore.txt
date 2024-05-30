@@ -1,0 +1,9 @@
+model/final_model/
+model/dialogue-summarization-T5
+.env/
+data/samsum/
+code/translate_test01.ipynb
+code/translate_samsum.ipynb
+code/solar_api.txt
+data/ko_samsum.csv
+code/wandb
