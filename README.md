@@ -1,5 +1,5 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/hm5nZYSf)
-# Title (Please modify the title)
+# Document-Summarization-LLM
+
 ## Team
 
 |![image](https://github.com/UpstageAILab/upstage-cv-classification-cv5/assets/96022213/e7394268-0f94-4468-8cf5-3cf67e4edd07)|![image](https://github.com/UpstageAILab/upstage-cv-classification-cv5/assets/96022213/9233ab6e-25d5-4c16-8dd4-97a7b8535baf) | ![image](https://github.com/UpstageAILab/upstage-cv-classification-cv5/assets/96022213/9c75cbd9-f409-4fdd-a5c3-dec082ade3bf) | ![image](https://github.com/UpstageAILab/upstage-cv-classification-cv5/assets/96022213/388eac05-7cd9-4688-8a87-5b6b742715cf) |![image](https://github.com/UpstageAILab/upstage-cv-classification-cv5/assets/96022213/48dd674c-ab93-48d1-9e05-e7e8e402597c) |![image](https://github.com/UpstageAILab/upstage-cv-classification-cv5/assets/96022213/0a524747-a854-4eee-95b6-108c84514df8) |
@@ -10,9 +10,6 @@
 ## 0. Overview
 ### Environment
 - Vscode, ssh server(RTX 3090/Ubuntu 20.04.6), pytorch
-
-### Requirements
-- _Write Requirements_
 
 ## 1. Competiton Info
 
@@ -27,33 +24,11 @@
 ![image](https://github.com/UpstageAILab/upstage-nlp-summarization-nlp-5/assets/42354230/807b16a7-6733-4e4d-9623-2aebbd4eeecf)
 
 
-### Timeline(2 weeks)
-- ex) Martch 8, 2024, 10:00 - Start Date
-- ex) Martch 20, 2024, 19:00 - Final submission deadline
+### Timeline
+- 2024.03.08 ~ 2024.03.20
+  
 
-
-## 2. Components
-
-### Directory
-
-```
-│
-├─code
-│      baselineT5_final.ipynb
-│      gpt_api.ipynb
-│      translate.ipynb
-├─data
-│      dev.csv
-│      gpt_train.csv
-│      sample_submission.csv
-│      test.csv
-│      train.csv
-├─model
-└─ppt
-        NLP 5조 Dialogue Summarization.pptx
-```
-
-## 3. Data descrption
+## 2. Data descrption
 
 ### Dataset overview
 ![image](https://github.com/UpstageAILab/upstage-nlp-summarization-nlp-5/assets/42354230/a072eae5-c709-4a2a-81d4-95784c230234)
@@ -80,13 +55,12 @@ Train Data 12457개, Valid Data 499개, Test Data 499개로 이루어져 있으�
 
 **GPT3.5 Api를 사용하여 데이터를 합성했습니다.** 위 그림과 같이 GPT에게 Instruction을 주고 학습데이터에서 샘플링한 5개의 대화문-요약문 쌍데이터를 예시로 보여준 뒤 질문으로 1개의 대화문을 입력해 요약문을 생성했습니다.  
 
-~~SAMSUM 데이터셋 활용~~
+SAMSUM 데이터셋 활용
 ![image](https://github.com/UpstageAILab/upstage-nlp-summarization-nlp-5/assets/42354230/514435f1-c572-4db3-af00-364e1a2013cd)
 
-~~대회 데이터셋이 번역 데이터라는 점을 활용하여 **다른 영어 대화문 데이터셋을 한글로 번역**하여 학습 데이터셋으로 활용하였습니다. 해당 데이터셋이 Upstage에서 추최하는 대회이기에 **Solar Api**를 활용하여 번역을 진행하면 좋을 것이라고 판단해서 Solar Api를 활용해 번역을 진행하였습니다.~~  
-SAMSUM 데이터셋이 변경금지 데이터임을 인지하고 해당 부분을 삭제함.
+대회 데이터셋이 번역 데이터라는 점을 활용하여 **다른 영어 대화문 데이터셋을 한글로 번역**하여 학습 데이터셋으로 활용하였습니다. 해당 데이터셋이 Upstage에서 추최하는 대회이기에 **Solar Api**를 활용하여 번역을 진행하면 좋을 것이라고 판단해서 Solar Api를 활용해 번역을 진행하였습니다.
 
-## 4. Modeling
+## 3. Modeling
 
 ### Model descrition
 [digit82/kobart-summarization](https://huggingface.co/digit82/kobart-summarization)
@@ -99,7 +73,7 @@ SAMSUM 데이터셋이 변경금지 데이터임을 인지하고 해당 부분�
 
 - _Write model train and test process with capture_
 
-## 5. Result
+## 4. Result
 
 ### Leader Board
 ![07](https://github.com/UpstageAILab/upstage-nlp-summarization-nlp-5/assets/42354230/68f8dcf0-86fe-4b5a-ab10-e7bb7c20aa2e)  
@@ -117,7 +91,7 @@ rougeL-F1: 0.4153
 ### Reference
 - train.csv, test.csv, dev.csv, sample_submission.csv 등의 파일은 DialogSum을 활용하여 만들어진 Upstage사의 2차 저작물임을 알려드립니다.
     - [DialogSum](https://huggingface.co/datasets/knkarthick/dialogsum): cc-by-nc-sa-4.0
-- ~~[SAMSUM Dataset](https://huggingface.co/datasets/samsum)~~: cc-by-nc-nd-4.0
+- [SAMSUM Dataset](https://huggingface.co/datasets/samsum): cc-by-nc-nd-4.0
 - Kobart: https://huggingface.co/digit82/kobart-summarization
 - 원본 T5: https://huggingface.co/eenzeenee/t5-base-korean-summarization
 - 해당 데이터셋으로 FineTuning한 T5: https://huggingface.co/dudcjs2779/dialogue-summarization-T5
