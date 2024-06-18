@@ -69,9 +69,6 @@ SAMSUM 데이터셋 활용
 [eenzeenee/t5-base-korean-summarization](https://huggingface.co/eenzeenee/t5-base-korean-summarization)
 - 해당 대회에서 수행하고자하는 Task인 요약에 대해서 많은 자료들로 사전에 Finetuning 돼 있었고 실제로 다른 T5 모델보다 좋은 성능을 보여주었습니다.
 
-### Modeling Process
-
-- _Write model train and test process with capture_
 
 ## 4. Result
 
