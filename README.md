@@ -63,11 +63,13 @@ SAMSUM 데이터셋 활용
 ## 3. Modeling
 
 ### Model descrition
-[digit82/kobart-summarization](https://huggingface.co/digit82/kobart-summarization)
-- 기본적으로 좋은 성능을 보여줌
+- Bart, T5, Pegasus-X 등 요약 Task에 강점을 보이는 주요 모델들을 fine-tuning 한 뒤 성능을 비교하였음
 
-[eenzeenee/t5-base-korean-summarization](https://huggingface.co/eenzeenee/t5-base-korean-summarization)
-- 해당 대회에서 수행하고자하는 Task인 요약에 대해서 많은 자료들로 사전에 Finetuning 돼 있었고 실제로 다른 T5 모델보다 좋은 성능을 보임
+- [digit82/kobart-summarization](https://huggingface.co/digit82/kobart-summarization)
+  - 기본적으로 좋은 성능을 보여줌
+
+- [eenzeenee/t5-base-korean-summarization](https://huggingface.co/eenzeenee/t5-base-korean-summarization)
+  - 해당 대회에서 수행하고자하는 Task인 요약에 대해서 많은 자료들로 사전에 Finetuning 돼 있었고 실제로 다른 T5 모델보다 좋은 성능을 보임
 
 - GPT 3.5 API로 생성한 추가적인 대화문 데이터와 SAMSUM 데이터셋을 활용하여 Data Augumentation을 수행한 뒤 T5 모델을 Fine-tuning 진행
   - [Fine-tuning 수행한 T5](https://huggingface.co/dudcjs2779/dialogue-summarization-T5)
